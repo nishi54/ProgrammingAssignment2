@@ -47,3 +47,19 @@ cacheSolve <- function( x, ...) {
   m
   
 }
+
+> m = makeCacheMatrix(rbind(c(2,4), c(4,2)))
+> m$get()
+     [,1] [,2]
+[1,]    2    4
+[2,]    4    2
+> cacheSolve(m)
+           [,1]       [,2]
+[1,] -0.1666667  0.3333333
+[2,]  0.3333333 -0.1666667
+> cacheSolve(m)
+getting cached data
+           [,1]       [,2]
+[1,] -0.1666667  0.3333333
+[2,]  0.3333333 -0.1666667
+> 
